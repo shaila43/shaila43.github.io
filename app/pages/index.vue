@@ -17,11 +17,15 @@
         date="09.09.2025"
         :badges="['Vue', 'Web3']"
         title="How to implement Multi Injected Provider Discovery | EIP-6963"
-        lead="
-          EIP-6963 is an Ethereum Improvement Proposal that defines a standard
-          interface for Ethereum provider detection in browsers. It allows dApps
-          to discover which wallet providers"
         href="how-to-implement-multi-injected-provider-discovery-eip-6963"
+      >
+      </BlogPost>
+      <BlogPost
+        image="/img/how-to-implement-siwe.png"
+        date="19.10.2025"
+        :badges="['Vue', 'Web3', 'Laravel']"
+        title="How to implement SIWE | EIP-4361"
+        href="how-to-implement-siwe"
       >
       </BlogPost>
     </div>

@@ -267,55 +267,24 @@ onUnmounted(() => {
         <span class="material-icons-outlined">expand_less</span>
       </button>
     </nav>
-    <Transition>
+    <BaseModal
+      :is-open="currentProvider !== null"
+      @on-close="currentProvider = null"
+      title="Provider details"
+    >
+      <img :src="currentProvider.info.icon" class="h-24 w-24 p-1 mx-auto" />
+      <p class="text-2xl font-medium text-center">
+        {{ currentProvider.info.name }}
+      </p>
       <div
-        v-if="currentProvider"
-        class="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-        @click.self="currentProvider = null"
+        class="grid grid-cols-[50px_1fr] gap-x-4 gap-y-2 text-sm md:text-base"
       >
-        <div
-          class="bg-white rounded-md shadow-lg w-full max-w-md p-6 relative m-4"
-        >
-          <button
-            class="absolute top-4 right-4 text-gray-600 hover:text-gray-300 cursor-pointer"
-            aria-label="Close modal"
-            @click="currentProvider = null"
-          >
-            <span class="material-icons-outlined">close</span>
-          </button>
-          <div class="space-y-5">
-            <h2 class="text-lg font-semibold mb-4">Provider details</h2>
-            <img
-              :src="currentProvider.info.icon"
-              class="h-24 w-24 p-1 mx-auto"
-            />
-            <p class="text-2xl font-medium text-center">
-              {{ currentProvider.info.name }}
-            </p>
-            <div
-              class="grid grid-cols-[50px_1fr] gap-x-4 gap-y-2 text-sm md:text-base"
-            >
-              <div class="font-semibold text-gray-600">Rdns:</div>
-              <div class="text-gray-600">{{ currentProvider.info.rdns }}</div>
+        <div class="font-semibold text-gray-600">Rdns:</div>
+        <div class="text-gray-600">{{ currentProvider.info.rdns }}</div>
 
-              <div class="font-semibold text-gray-600">Uuid:</div>
-              <div class="text-gray-600">{{ currentProvider.info.uuid }}</div>
-            </div>
-          </div>
-        </div>
+        <div class="font-semibold text-gray-600">Uuid:</div>
+        <div class="text-gray-600">{{ currentProvider.info.uuid }}</div>
       </div>
-    </Transition>
+    </BaseModal>
   </div>
 </template>
-
-<style lang="css">
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
-</style>

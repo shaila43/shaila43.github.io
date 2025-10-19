@@ -2,7 +2,6 @@
 defineProps({
   title: { type: String, required: true },
   href: { type: String, required: true },
-  lead: { type: String, required: true },
   date: { type: String, required: true },
   badges: { type: Array, default: [] },
   image: { type: String, required: true },
@@ -27,7 +26,6 @@ defineProps({
         >
       </div>
       <h3 class="text-lg md:text-xl font-semibold">{{ title }}</h3>
-      <!-- <p class="text-sm md:text-base text-justify">{{ lead }}...</p> -->
       <button
         class="text-white py-1 px-3 mt-2 md:mt-4 inline-block bg-gradient-brand text-sm md:text-base cursor-pointer"
       >

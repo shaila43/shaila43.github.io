@@ -7,8 +7,6 @@
   --color-pink: #f2385a; */
   --color-dark-blue: oklch(0.2911 0.0498 221.08);
   --color-pink: oklch(0.6354 0.2194 16.52);
-
-  --color-blog: oklch(0.373 0.034 259.733);
 }
 
 @layer utilities {
@@ -31,4 +29,8 @@
   .bg-gradient-brand:hover {
     background-position: right center;
   }
+}
+
+.link-primary {
+  @apply font-semibold text-pink hover:text-dark-blue transition-all duration-300 underline decoration-pink hover:decoration-dark-blue;
 }
