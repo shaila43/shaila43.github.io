@@ -21,7 +21,7 @@
       >
       </BlogPost>
       <BlogPost
-        image="/img/how-to-implement-siwe.png"
+        image="/img/how-to-implement-siwe.webp"
         date="19.10.2025"
         :badges="['Vue', 'Web3', 'Laravel']"
         title="How to implement SIWE | EIP-4361"

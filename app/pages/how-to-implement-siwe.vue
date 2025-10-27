@@ -134,7 +134,7 @@ class SiweController extends Controller
   <div>
     <article class="max-w-3xl mx-auto">
       <img
-        src="/img/multi-injected-provider-discovery-eip-6963.jpeg"
+        src="/img/how-to-implement-siwe.webp"
         class="w-full aspect-16/9 mx-auto"
       />
       <h2
